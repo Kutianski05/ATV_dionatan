@@ -9,4 +9,4 @@ botao.addEventListener("click", function(){
     } else {
         titulo.innerText = "Outro texto"
     }
-})
+});
