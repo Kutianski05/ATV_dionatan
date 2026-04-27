@@ -1,7 +1,6 @@
-const elemento = document.getElementById('texto');
+const titulo = document.getElementById('titulo')
+const botao = doucument.getElementById('botao')
 
-if(elemento){
-    elemento.addEventListener('click', () => {
-        elemento.textContent = 'Botão Clicado';
-    });
-}
+botao.addEventListener("click", function(){
+    titulo.innerText = "Outro texto"
+});
