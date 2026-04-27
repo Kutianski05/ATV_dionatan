@@ -1,12 +1,11 @@
 const titulo = document.getElementById('titulo');
-const botao = doucument.getElementById("botao");
+const botao = doucument.getElementById('botao');
 
-botao.addEventListener("click", function(){
-    titulo.innerText = "Outro texto"
-
+botao.addEventListener('click', function(){
+   
     if(titulo.innerText == "Outro texto"){
-        titulo.innerText = "45"
+        titulo.innerText = "45";
     } else {
-        titulo.innerText = "Outro texto"
+        titulo.innerText = "Outro texto";
     }
 });
