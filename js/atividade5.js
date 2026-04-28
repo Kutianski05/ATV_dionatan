@@ -29,30 +29,24 @@
 // → chamar salvar() ao:
 //    - adicionar item
 //    - Carregar a página
+const input = document.getElementById('input');
+const botao = document.getElementById('botao');
+const lista = document.getElementById('lista');
 
-const botao = document.getElementById("botao");
-const input = document.getElementById("texto");
-const lista = document.getElementById("lista");
-
-
-botao.addEventListener('click', function(){
-    
-    const texto = input.value;
-    
+function criarItem(texto) {
     const item = document.createElement("li");
     item.textContent = texto;
-    lista.appendChild(item);
 
-    const btnRemover = document.createElement("button");
-    btnRemover.textContent = "Remover";
+    const remover = document.createElement("button");
+    remover.textContent = "X";
 
-    btnRemover.addEventListener("click" , function(){
-        lista.removeChild(item);
+    remover.addEventListener("click", function () {
+        item.remove();
     });
 
-    item.appendChild(btnRemover);
-
-});
+    item.appendChild(remover);
+    lista.appendChild(item);
+}
 
 botao.addEventListener("click", function () {
     const texto = input.value;
