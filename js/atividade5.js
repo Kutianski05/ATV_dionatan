@@ -54,6 +54,18 @@ botao.addEventListener('click', function(){
 
 });
 
+botao.addEventListener("click", function () {
+    const texto = input.value;
+
+    if (texto === "") return;
+
+    criarItem(texto);
+
+    salvar(); 
+    input.value = "";
+});
+
+
 function salvar() {
     const itens = document.querySelectorAll("#lista li");
 
