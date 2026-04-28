@@ -53,3 +53,26 @@ botao.addEventListener('click', function(){
     item.appendChild(btnRemover);
 
 });
+
+function salvar() {
+    const itens = document.querySelectorAll("#lista li");
+
+    const dados = [];
+
+    itens.forEach(function (li) {
+        const texto = li.firstChild.textContent;
+        dados.push(texto);
+    });
+
+    localStorage.setItem("lista", JSON.stringify(dados));
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dados = JSON.parse(localStorage.getItem("lista")) || [];
+
+    dados.forEach(function (texto) {
+        criarItem(texto);
+    });
+});
